@@ -106,7 +106,11 @@ class Maze:
 generate = Maze(31, 31)
 maze = generate.generate_map()
 
-print(maze)
+player = {'x': 0, 'y': 0}
+maze[player['y']][player['x']] = '🟦'
+maze[30][30] = '🟩'
+
+#print(maze)
 for column in maze:
     for row in column:
         for i in row:
