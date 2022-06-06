@@ -9,6 +9,10 @@ python3 maze.py
 Play in console:
 
 ```python
+player = {'x': 0, 'y': 0}
+move = {'x': 0, 'y': 0}
+maze[player['y']][player['x']] = '🟦'
+maze[30][30] = '🟩'
 # play
 while True:
     # rendering the map to the console
