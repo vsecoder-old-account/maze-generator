@@ -1,6 +1,6 @@
 import random
 
-class maze:
+class Maze:
     def __init__(self, rowsNumber, columnsNumber):
         self.rowsNumber = rowsNumber
         self.columnsNumber = columnsNumber
@@ -103,42 +103,18 @@ class maze:
 
         return self.maze
 
-generate = maze(31, 31)
+generate = Maze(31, 31)
 maze = generate.generate_map()
+
+print(maze)
+for column in maze:
+    for row in column:
+        for i in row:
+            print(i, end='')
+    print('\n', end='')
+
+
 player = {'x': 0, 'y': 0}
 move = {'x': 0, 'y': 0}
 maze[player['y']][player['x']] = '🟦'
 maze[30][30] = '🟩'
-
-# rendering the map to the console
-while True:
-    for column in maze:
-        for row in column:
-            for i in row:
-                print(i, end='')
-        print('\n', end='')
-
-    move = {'x': player['x'], 'y': player['y']}
-    press = input('Press w, a, s or d to move: ')
-
-    if press == 'w':
-        move['y'] = move['y'] - 1
-    if press == 'a':
-        move['x'] = move['x'] - 1
-    if press == 's':
-        move['y'] = move['y'] + 1
-    if press == 'd':
-        move['x'] = move['x'] + 1
-
-    if maze[move['y']][move['x']] == '⬛️':
-        print('Not allowed')
-    elif maze[move['y']][move['x']] == '⬜️':
-        maze[player['y']][player['x']] = '⬜'
-        player = move
-    elif maze[move['y']][move['x']] == '🟩':
-        print('You win!')
-        break
-
-    maze[player['y']][player['x']] = '🟦'
-    
-
