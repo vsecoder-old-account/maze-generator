@@ -112,9 +112,3 @@ for column in maze:
         for i in row:
             print(i, end='')
     print('\n', end='')
-
-
-player = {'x': 0, 'y': 0}
-move = {'x': 0, 'y': 0}
-maze[player['y']][player['x']] = '🟦'
-maze[30][30] = '🟩'
