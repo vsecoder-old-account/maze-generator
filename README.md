@@ -1,4 +1,4 @@
-# maze-generater
+# Maze Generator in python
 
 ## Generate
 
@@ -10,6 +10,4 @@ python3 maze.py
 
 ## Screen
 
-50x50
-
-![1](https://raw.githubusercontent.com/vsecoder/maze-generater/main/maze.png)
+![50x50](https://raw.githubusercontent.com/vsecoder/maze-generater/main/maze.png)
